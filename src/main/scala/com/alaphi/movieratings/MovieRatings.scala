@@ -35,12 +35,9 @@ object MovieRatings {
     val top3ResultsPath = dataFolder + separator + "parquet" + separator + "userTop3_"
     val moviesFile = "movies.dat"
     val ratingsFile = "ratings.dat"
-    val master = args.headOption.getOrElse("local[*]")   // The only cmd line param
 
     // Spark Conf and Context
-    val conf = new SparkConf()
-      .setMaster(master)
-      .setAppName("MovieRatings")
+    val conf = new SparkConf().setAppName("MovieRatings")
 
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)

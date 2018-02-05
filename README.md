@@ -11,7 +11,7 @@ Calculate:
 
 Place the extracted data input files into folder:
 
-<user-home>/moviedata
+ userhome/moviedata
 
 ### Build:
 
@@ -19,4 +19,4 @@ Place the extracted data input files into folder:
 
 ### Submit to Spark
 
-spark-submit --master local[*] MovieRatingsSpark.jar
+> spark-submit --master local[*] MovieRatingsSpark.jar
